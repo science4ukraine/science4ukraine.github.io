@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="logo_transparent.png"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a style="color:#0056B9;" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Faculty</a></li>
+                    <li><a href="#">Photographs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="ASRC-CDI.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="cafespace.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="labphoto.jpg" alt="Image 3">
+        </div>
+
+        <ul class="carousel-indicators">
+            <li class="active" onclick="changeSlide(0)"></li>
+            <li onclick="changeSlide(1)"></li>
+            <li onclick="changeSlide(2)"></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
