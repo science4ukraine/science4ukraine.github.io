@@ -10,9 +10,11 @@ const showSlide = () => {
     slides.forEach((slide, index) => {
         if (index === currentSlideIndex) {
             slide.style.opacity = 1;
+            slide.style.zIndex = 1;
             indicators[index].classList.add('active');
         } else {
             slide.style.opacity = 0;
+            slide.style.zIndex = 0;
             indicators[index].classList.remove('active');
         }
     });
@@ -42,8 +44,6 @@ const stopCarousel = () => {
 
 showSlide();
 startCarousel();
-
-
 
 const carouselContainer = document.querySelector('.carousel-container');
 

@@ -45,15 +45,19 @@ nav{
 }
 
 .carousel-slide {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
+    width: 100%;
+    height: auto;
     transition: opacity 0.5s ease;
 }
 
 .carousel-slide.active {
-    display: block;
     opacity: 1;
 }
+
 
 .carousel-slide img {
     width: 100%;
@@ -84,3 +88,5 @@ nav{
 .carousel-indicators li.active::before {
     background-color: #333;
 }
+
+
