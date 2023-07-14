@@ -35,7 +35,7 @@ const changeSlide = (n) => {
 const startCarousel = () => {
     interval = setInterval(() => {
         changeSlide(1);
-    }, 3000); // Change slide every 3 seconds (adjust the time interval as desired)
+    }, 5000); // Change slide every 3 seconds (adjust the time interval as desired)
 };
 
 const stopCarousel = () => {
@@ -44,6 +44,7 @@ const stopCarousel = () => {
 
 showSlide();
 startCarousel();
+
 
 const carouselContainer = document.querySelector('.carousel-container');
 
