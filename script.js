@@ -1,5 +1,3 @@
-// JavaScript code for automatic fading carousel
-
 const slides = document.querySelectorAll('.carousel-slide');
 const indicators = document.querySelectorAll('.carousel-indicators li');
 
@@ -16,6 +14,15 @@ const showSlide = () => {
             slide.style.opacity = 0;
             slide.style.zIndex = 0;
             indicators[index].classList.remove('active');
+        }
+    });
+
+    const captions = document.querySelectorAll('.caption');
+    captions.forEach((caption, index) => {
+        if (index === currentSlideIndex) {
+            caption.style.opacity = 1;
+        } else {
+            caption.style.opacity = 0;
         }
     });
 };
@@ -35,7 +42,7 @@ const changeSlide = (n) => {
 const startCarousel = () => {
     interval = setInterval(() => {
         changeSlide(1);
-    }, 5000); // Change slide every 3 seconds (adjust the time interval as desired)
+    }, 4000);
 };
 
 const stopCarousel = () => {
@@ -44,7 +51,6 @@ const stopCarousel = () => {
 
 showSlide();
 startCarousel();
-
 
 const carouselContainer = document.querySelector('.carousel-container');
 
