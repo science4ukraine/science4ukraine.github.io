@@ -56,3 +56,6 @@ const carouselContainer = document.querySelector('.carousel-container');
 
 carouselContainer.addEventListener('mouseover', stopCarousel);
 carouselContainer.addEventListener('mouseout', startCarousel);
+
+
+  
