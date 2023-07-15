@@ -124,3 +124,40 @@ nav {
 .caption p {
     font-size: 14px;
 }
+
+/* INVITED SPEAKERS PAGE */
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.photo {
+    border-radius: 10px;
+}
+
+.name {
+    color: #0056B9;
+}
+
+.paragraph1 {
+    width: 40%;
+    float: right;
+    text-align: justify;
+    margin-top: 30px;
+    margin-right: 200px;
+    border-right: 5px solid #0056B9;
+    padding: 15px;
+    font-size: 20px;
+}
+
+p.paragraph2 {
+    width: 40%;
+    float: left;
+    text-align: justify;
+    margin-top: 80px;
+    margin-left: 200px;
+    border-left: 5px solid #FFD800;
+    padding: 15px;
+    font-size: 20px;
+}
