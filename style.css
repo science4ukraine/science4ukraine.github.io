@@ -393,3 +393,39 @@ p.paragraph3 {
     margin-left: 170px;
     padding: 10px; 
 }
+
+
+.wrapper {
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+.attendeeslist {
+	margin-top: 10px;
+    padding: 1.5rem 1.5rem 1.5rem 4em;
+	border: 0.3rem solid #0056B9;
+	columns: 15rem;
+	column-gap: 7rem;
+	column-rule: 4px dotted #FFD800;;
+	border-radius: 0.5rem;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+ul > * + * {
+	margin-top: 0.5rem;
+}
+
+li.uname {
+	break-inside: avoid;
+}
+
+li.uname {
+	display: block;
+    font-size: 16px;
+}
+
+.position {
+    margin-top: 10px;
+    margin-left: 150px;
+}
