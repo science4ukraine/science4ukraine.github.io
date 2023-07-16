@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science for Ukraine</title>
+    <title>Invited Speakers</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
@@ -14,12 +14,12 @@
     <header class="header">
         <nav>
             <div class="logo">
-                <a href="#"><img src="images/logo_transparent.png"></a>
+                <a href="index.html"><img src="images/logo_transparent.png"></a>
             </div>
             <div class="nav-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Program</a></li>
+                    <li><a href="program.html">Program</a></li>
                     <li><a style="color:#0056B9;" href="invited-speakers.html">Invited Speakers</a></li>
                     <li><a href="#">Attendees</a></li>
                     <li><a href="#">Organising Committee</a></li>
@@ -32,7 +32,6 @@
         </nav>
     </header>
 
-<body>
     <div class="main">
         
         <h1 class="title">INVITED SPEAKERS</h1>
@@ -240,18 +239,18 @@
     </div>
     <button id="scrollToTop" onclick="scrollToTop()"><img src="images/chevronbg.png" alt="Scroll Up"></button>
         <script>
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
         window.addEventListener('scroll', function () {
-            const scrollToTopBtn = document.getElementById('scrollToTop');
-            if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = 'block';
-            } else {
-            scrollToTopBtn.style.display = 'none';
-            }
-        });
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.opacity = '1';
+    } else {
+        scrollToTopBtn.style.opacity = '0';
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
         </script>
 
         <footer class="footer">

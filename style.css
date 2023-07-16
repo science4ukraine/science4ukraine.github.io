@@ -274,9 +274,9 @@ p.paragraph3 {
 }
 
 #scrollToTop {
-    display: none;
+    display: block;
     position: fixed;
-    bottom: 30px; 
+    bottom: 30px;
     right: 30px;
     width: 50px;
     height: 50px;
@@ -285,6 +285,8 @@ p.paragraph3 {
     cursor: pointer;
     outline: none;
     z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #scrollToTop img {
@@ -323,4 +325,71 @@ p.paragraph3 {
 .sponsor-logos img {
     max-height: 30px;
 }
-  
+ 
+
+/* PROGRAM PROGRAM PROGRAM */
+
+.date {
+    padding: 5px; 
+    margin-left: 150px; 
+    font-size: 14px;
+}
+
+.dateline {
+    width: 80%;
+    margin-left: 10%; 
+    background-color: rgb(175, 175, 175);
+    height: 1px;
+}
+
+.eventline {
+    width: 79%;
+    margin-left: 11%; 
+    background-color: rgb(222, 221, 221);
+    height: 0.5px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event {
+    margin-top: 0px; 
+    padding: 10px; 
+    margin-left: 160px; 
+    font-size: 18px;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    left: 155px;
+    height: 23px;
+    width: 5px; 
+    background-color: var(--line-color);
+    border-radius: 12px;
+}
+
+.location {
+    margin-top: 10px;
+    font-style: italic;
+    position: absolute; 
+    right: 45%;
+}
+
+.time {
+    margin-top: 10px;
+    position: relative; 
+    margin-right: 160px; 
+}
+
+.list {
+    display: flex; 
+    flex-direction: column;
+}
+
+.bullets {
+    margin-left: 170px;
+    padding: 10px; 
+}
