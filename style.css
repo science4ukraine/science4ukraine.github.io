@@ -429,3 +429,41 @@ li.uname {
     margin-top: 10px;
     margin-left: 150px;
 }
+
+.chair {
+  display: flex;
+}
+
+.stuff {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.cochairs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.small-images {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.small-images img {
+  margin-right: 10px;
+}
+
+.small-images p {
+  font-size: 12px;
+  max-width: 200px;
+}
+
+.multiline {
+    display: flex;
+    flex-direction: column;
+}

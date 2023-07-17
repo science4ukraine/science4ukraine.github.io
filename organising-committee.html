@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invited Speakers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_transparent.png"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="invited-speakers.html">Invited Speakers</a></li>
+                    <li><a href="attendees.html">Attendees</a></li>
+                    <li><a style="color:#0056B9;" href="organising-committee.html">Organising Committee</a></li>
+                    <li><a href="#">Venue</a></li>
+                    <li><a href="#">Accommodation</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+        
+        <h1 class="title">ORGANISING COMMITTEE</h1>
+
+            <div class="chair">
+            <div class="stuff">
+            <img src="images/khanikaev.jpg" alt="Placeholder Image" width="40%" style="margin-top: 30px; margin-left: 5%;">
+              <p style="font-size: 20px; margin-top:10px; margin-left: 5%; font-style: italic;">Organiser and Chair</p>
+              <p style="font-size: 24px; margin-top:5px; margin-left: 5%;">Alexander Khanikaev</p>
+              <p style="font-size: 16px; margin-top:5px; margin-left: 5%;">Professor at the City College <br> of New York </p>
+            </div>
+            <div class="cochair">
+              <div class="small-images">
+                <img src="images/alu.jpg" alt="Small Image 1" width="30.5%" style="margin-top: 30px;">
+                <div class="multiline">
+                <p style="font-size: 18px; margin-top: 5px;"><i>Co-Chair</i> <br> Andrea Alu</p>
+                <p style="font-size: 14px; margin-top: 3px;">Professor at the Graduate Center, CUNY</p>
+                </div>
+              </div>
+              <div class="small-images">
+                <img src="images/mozoleski.jpg" alt="Small Image 2" width="30.5%" style="margin-top: 5px;">
+                <div class="multiline">
+                <p style="font-size: 18px; margin-top: 5px;"><i>Co-Chair</i> <br> Dee Dee Mozeleski</p>
+                <p style="font-size: 14px; margin-top: 3px;">Vice President of the Office of Institutional Advancement and Communications, CCNY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        
+
+    </div>
+
+
+
+
+
+
+    <button id="scrollToTop" onclick="scrollToTop()"><img src="images/chevronbg.png" alt="Scroll Up"></button>
+        <script>
+        window.addEventListener('scroll', function () {
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.opacity = '1';
+        } else {
+            scrollToTopBtn.style.opacity = '0';
+        }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+
+        <footer class="footer">
+        <div class="footer-container">
+        <p class="ty">THANK YOU TO OUR SPONSORS</p>
+        <div class="sponsor-logos">
+            <a target="_blank" href="https://www.simonsfoundation.org/"><img src="images/simons.webp" alt="Simons Foundation"></a>
+            <a target="_blank" href="https://www.nre.navy.mil/"><img src="images/ONR.png" alt="ONR"></a>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
