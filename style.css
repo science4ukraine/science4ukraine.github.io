@@ -369,7 +369,7 @@ p.paragraph3 {
 
 .date {
     padding: 5px; 
-    margin-left: 150px; 
+    margin-left: 10%; 
     font-size: 14px;
 }
 
@@ -395,7 +395,7 @@ p.paragraph3 {
 .event {
     margin-top: 0px; 
     padding: 10px; 
-    margin-left: 160px; 
+    margin-left: 10.5%; 
     font-size: 18px;
 }
 
@@ -425,11 +425,13 @@ p.paragraph3 {
 .list {
     display: flex; 
     flex-direction: column;
+    text-align: left;
 }
 
 .bullets {
-    margin-left: 170px;
+    margin-left: 50%;
     padding: 10px; 
+    white-space: nowrap;
 }
 
 
