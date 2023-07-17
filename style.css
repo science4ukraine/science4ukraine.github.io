@@ -9,6 +9,26 @@ body {
     overflow-x: hidden;
 }
 
+.everything {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        padding: 10px;
+    }
+    .carousel-slide img{ 
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .everything {
+        max-width: 100%;
+    }
+}
+
 .header {
     padding: 10px;
     top: 0;
