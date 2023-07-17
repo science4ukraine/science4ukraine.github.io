@@ -53,6 +53,27 @@ nav {
     color: black;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.title {
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 18px;
+    float: left;
+    writing-mode: vertical-rl; /* Changed from vertical-lr to vertical-rl */
+    text-orientation: mixed; /* Changed from sideways to mixed */
+    top: 20px; /* Adjust this value as needed to control when the title becomes sticky */
+    transform: rotate(-180deg);
+    position: sticky;
+    z-index: 999;
+    font-weight: normal;
+}
+
 .carousel-container {
     position: relative;
     max-width: 60%;
@@ -127,11 +148,7 @@ nav {
 }
 
 /* INVITED SPEAKERS PAGE */
-.title {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 40px;
-}
+
 
 .photo {
     border-radius: 10px;
@@ -467,3 +484,40 @@ li.uname {
     display: flex;
     flex-direction: column;
 }
+
+.p1 {
+    position: absolute;
+    margin-left: 12%;
+    margin-top: 12%;
+    max-width: 30%;
+    z-index: 1;
+}
+
+.image1 {
+    width: 40%;
+    margin-left: 120px;
+    position: relative; /* Add this to establish a positioning context */
+}
+
+.image1 img {
+    width: 100%;
+}
+
+.image1 .cap {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.p2 {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    max-width: 30%;
+}
+

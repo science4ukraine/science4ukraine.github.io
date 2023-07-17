@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invited Speakers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_transparent.png"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="invited-speakers.html">Invited Speakers</a></li>
+                    <li><a href="attendees.html">Attendees</a></li>
+                    <li><a href="organising-committee.html">Organising Committee</a></li>
+                    <li><a style="color:#0056B9;" href="venue.html">Venue</a></li>
+                    <li><a href="#">Accommodation</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1 class="title">VENUE</h1>
+
+        <p class="p1">The conference will take place at the City University of New York, the City College Center for
+             Discovery and Innovations (CDI) and the Advanced Science Research Center (ASRC) location. The 
+             University will provide ample meeting space which will include a large conference room, several small 
+             conference rooms for small group meetings, and laboratory space for students to carry our research, 
+             as well as dormitory space. The University regularly hosts conferences an workshops at these facilities,
+              which will ensure the success of the S4U Summer School.
+        </p>
+        
+        <div class="image1" style="position: relative;
+        width: 40%;
+        margin-top: 60px;
+        margin-right: 80px;
+        float: right;">
+            <img src="images/ASRCgoodphoto.jpg" alt="ASRC-CDI" width="40%">
+            <p class="cap">ASRC-CDI complex</p>
+        </div>
+
+        <div class="image1" style="top: 20px;">
+            <img src="images/auditorium.jpg" alt="ASRC-CDI" width="40%">
+            <p class="cap">ASRC auditorium where the lectures and guest talks will be delivered </p>
+        </div>
+        
+        <p class="p2">The ASRC-CDI complex offers an exceptional infrastructure for holding 
+            events such as S4U school. For example, lectures and talks by guests of the summer schools will 
+            take place in the ASRC auditorium. This auditorium is fully equipped with the latest 
+            technologies, which will allow us to host speakers both in person and online. We also plan to have lectures 
+            streamed online so that other high school students from Ukraine can join the event. 
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            Participants will have access to the shared open space which includes cafeteria and lobby where 
+            they can work and meet for a small discussion.Students will have an opportunity to visit and work in the 
+            laboratories of the faculty members of the ASRC and CCNY. In addition, they will be visiting and working 
+            in shared user facilities located in the ASRC/CDI complex.
+        </p>
+        
+        <div class="image1" style="top: 120px;">
+            <img src="images/cafeteria.jpg" alt="ASRC-CDI" width="40%">
+            <p class="cap">Shared space and cafeteria at the ASRC and CDI.</p>
+        </div>
+        
+        <div class="image1" style="position: relative;
+        width: 40%;
+        margin-top: 70px;
+        margin-right: 80px; margin-bottom: 100px;
+        float: right;">
+            <img src="images/lab.jpg" alt="ASRC-CDI" width="40%">
+            <p class="cap">Typical laboratory where students will carry out their research projects.</p>
+        </div>
+        
+
+    </div>
+
+    
+    
+<button id="scrollToTop" onclick="scrollToTop()"><img src="images/chevronbg.png" alt="Scroll Up"></button>
+        <script>
+        window.addEventListener('scroll', function () {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.opacity = '1';
+    } else {
+        scrollToTopBtn.style.opacity = '0';
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+        </script>
+
+        <footer class="footer">
+        <div class="footer-container">
+        <p class="ty">THANK YOU TO OUR SPONSORS</p>
+        <div class="sponsor-logos">
+            <a target="_blank" href="https://www.simonsfoundation.org/"><img src="images/simons.webp" alt="Simons Foundation"></a>
+            <a target="_blank" href="https://www.nre.navy.mil/"><img src="images/ONR.png" alt="ONR"></a>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
