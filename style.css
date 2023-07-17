@@ -97,7 +97,7 @@ nav {
 .carousel-container {
     position: relative;
     max-width: 60%;
-    margin: 20px auto;
+    margin: 2% auto;
 }
 
 .carousel-slide {
@@ -122,13 +122,14 @@ nav {
 .carousel-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
     list-style: none;
     position: absolute;
-    bottom: -570px;
+    bottom: 5px;
     left: 50%;
+    background-color: none;
     transform: translateX(-50%);
-    z-index: 1; 
+    z-index: 1;
+    padding-top: 0px; /* Add padding to increase space */
 }
 
 .carousel-indicators li {
