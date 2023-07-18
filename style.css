@@ -369,20 +369,20 @@ p.paragraph3 {
 
 .date {
     padding: 5px; 
-    margin-left: 10%; 
+    margin-left: 150px; 
     font-size: 14px;
 }
 
 .dateline {
-    width: 80%;
-    margin-left: 10%; 
+    margin-right: 10%;
+    margin-left: 150px; 
     background-color: rgb(175, 175, 175);
     height: 1px;
 }
 
 .eventline {
-    width: 79%;
-    margin-left: 11%; 
+    margin-right: 10%;
+    margin-left: 170px; 
     background-color: rgb(222, 221, 221);
     height: 0.5px;
 }
@@ -395,7 +395,7 @@ p.paragraph3 {
 .event {
     margin-top: 0px; 
     padding: 10px; 
-    margin-left: 10.5%; 
+    margin-left: 160px; 
     font-size: 18px;
 }
 
@@ -419,19 +419,17 @@ p.paragraph3 {
 .time {
     margin-top: 10px;
     position: relative; 
-    margin-right: 160px; 
+    margin-right: 10%;
 }
 
 .list {
     display: flex; 
     flex-direction: column;
-    text-align: left;
 }
 
 .bullets {
-    margin-left: 50%;
+    margin-left: 170px;
     padding: 10px; 
-    white-space: nowrap;
 }
 
 
