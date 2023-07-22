@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invited Speakers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_transparent.png"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="invited-speakers.html">Invited Speakers</a></li>
+                    <li><a href="attendees.html">Attendees</a></li>
+                    <li><a href="organising-committee.html">Organizing Committee</a></li>
+                    <li><a href="participating-labs.html">Participating Labs</a></li>
+                    <li><a href="venue.html">Venue</a></li>
+                    <li><a style="color:#0056B9;" href="accommodation.html">Accommodation</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1 class="title">VENUE</h1>
+
+        
+    <div class="flexgrid" style="margin-top: 20px;">
+        <div class="cont">
+            <p class="p1">
+                The students will stay in the CCNY dormitory “Towers”, adjacent to the ASRC-CDI complex, which will 
+                provides a comfortable accommodation right next to the S4U event location.
+                The Towers is an apartment-style residence hall on-campus at the City College of New York (CCNY), 
+                which is located in the Hamilton Heights neighborhood within northern Manhattan and conveniently
+                 near multiple subway stations along with a wide variety of stores and restaurants. <br>
+ 	            The Towers offers free wireless internet service throughout the entire building (including resident 
+                rooms and lounges), a multi-purpose seminar room, a fitness center, a central laundry facility, 
+                a secure outdoor patio area with BBQ grills, a community kitchen and lounge area with a billiards table 
+                and large TV with comfortable seating. <br>
+ 	            The Towers is a secure building, with access only available for residents via a 
+                secure access card. There is a Courtesy Desk which is staffed 24 hours a day, 7 days a week, to 
+                help with any questions one has or needs during your stay. Additionally, there are closed-circuit security
+                 cameras located throughout the building.
+            </p>
+            <div class="imgcap">
+            <img class="photo" src="images/tower2-ccny.jpg" alt="Placeholder Image">
+            </div>
+
+        </div>
+        <img class="fullwidth" src="images/towers-ccny.jpg" alt="img">
+        <p style="margin-bottom: 90px;">The Towers – CCNY dormitory adjacent to the ASRC-CDI complex of buildings where the S4U conference will take place.</p>
+
+    </div>
+
+    </div>
+
+    
+    
+<button id="scrollToTop" onclick="scrollToTop()"><img src="images/chevronbg.png" alt="Scroll Up"></button>
+        <script>
+        window.addEventListener('scroll', function () {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.opacity = '1';
+    } else {
+        scrollToTopBtn.style.opacity = '0';
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+        </script>
+
+        <footer class="footer">
+        <div class="footer-container">
+        <p class="ty">THANK YOU TO OUR SPONSORS</p>
+        <div class="sponsor-logos">
+            <a target="_blank" href="https://www.simonsfoundation.org/"><img src="images/simons.webp" alt="Simons Foundation"></a>
+            <a target="_blank" href="https://www.nre.navy.mil/"><img src="images/ONR.png" alt="ONR"></a>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
