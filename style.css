@@ -452,6 +452,18 @@ li.uname {
     font-size: 14px;
 }
 
+.info1 {
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid #0056B9;
+}
+
+.info2 {
+    display: flex;
+    flex-direction: column;
+    border-left: 5px solid #FFD800;
+}
+
 @media screen and (max-width: 600px) {
     /* Adjust the header and navigation layout for mobile */
     .header {
