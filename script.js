@@ -39,6 +39,13 @@ const changeSlide = (n) => {
     showSlide();
 };
 
+const clickSlide = (index) => {
+    if (index >= 0 && index < slides.length) {
+        currentSlideIndex = index;
+        showSlide();
+    }
+};
+
 const startCarousel = () => {
     interval = setInterval(() => {
         changeSlide(1);
