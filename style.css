@@ -487,6 +487,34 @@ li.uname {
     margin-top: 60px;
 }
 
+.partner {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    margin-left: 100px;
+}
+
+.partner1 {
+    width: 200px;
+}
+
+.partner-right {
+    flex: 1;
+    margin-left: 120px;
+    padding: 15px;
+    text-align: right;
+}
+
+.entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    width: 100%;
+}
+
 @media screen and (max-width: 600px) {
     /* Adjust the header and navigation layout for mobile */
     .header {
