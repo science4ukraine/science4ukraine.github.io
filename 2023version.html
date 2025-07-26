@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 Gallery - Science for Ukraine</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 32px;
+            color: #0056B9;
+            font-family: 'Inter', sans-serif;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 44px;
+        }
+        .image-grid img {
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+            border-radius: 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.22s, box-shadow 0.22s;
+            background: #f5f5f5;
+            display: block;
+            cursor: pointer;
+        }
+        .image-grid img:hover {
+            transform: translateY(-10px) scale(1.04);
+            box-shadow: 0 0 0 8px rgba(0,86,185,0.13), 0 16px 48px rgba(0,86,185,0.18), 0 4px 16px rgba(0,0,0,0.12);
+            outline: none;
+        }
+        @media (max-width: 1000px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 700px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            box-shadow: 0 0 40px 8px rgba(0,86,185,0.18);
+            background: #fff;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 32px;
+            right: 48px;
+            font-size: 2.5rem;
+            color: #fff;
+            cursor: pointer;
+            z-index: 10000;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_transparent.png" alt="Logo"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="invited-speakers.html">Invited Speakers</a></li>
+                    <li><a href="attendees.html">Attendees</a></li>
+                    <li><a href="organising-committee.html">Organizing Committee</a></li>
+                    <li><a href="participating-labs.html">Participating Labs</a></li>
+                    <li><a href="venue.html">Venue</a></li>
+                    <li><a href="accommodation.html">Accommodation</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">2023 &#x25BC;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="2023version.html">Gallery</a></li>
+                            <li><a href="2023_program.html">Program</a></li>
+                            <li><a href="2023_invited-speakers.html">Speakers</a></li>
+                            <li><a href="2023_attendees.html">Attendees</a></li>
+                            <li><a href="2023_participating-labs.html">Labs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="gallery-container">
+        <h1 class="gallery-title">2023 Gallery</h1>
+        <div class="image-grid">
+            <img src="images/img1.jpg" alt="2023 Event 1" onclick="openLightbox(this)">
+            <img src="images/img2.jpg" alt="2023 Event 2" onclick="openLightbox(this)">
+            <img src="images/img3.jpg" alt="2023 Event 3" onclick="openLightbox(this)">
+            <img src="images/akhanikaev.jpg" alt="2023 Event 4" onclick="openLightbox(this)">
+            <img src="images/alu.jpg" alt="2023 Event 5" onclick="openLightbox(this)">
+            <img src="images/Brumberg.jpg" alt="2023 Event 6" onclick="openLightbox(this)">
+            <img src="images/cafe.jpg" alt="2023 Event 7" onclick="openLightbox(this)">
+            <img src="images/lecture-halls.jpg" alt="2023 Event 8" onclick="openLightbox(this)">
+        </div>
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="Full Size">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="ty">THANK YOU TO OUR SPONSORS</p>
+            <div class="sponsor-logos">
+                <a target="_blank" href="https://www.simonsfoundation.org/"><img src="images/simons.webp" alt="Simons Foundation"></a>
+                <a target="_blank" href="https://www.nre.navy.mil/"><img src="images/ONR.png" alt="ONR"></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openLightbox(img) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+        }
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+        }
+        // Close lightbox on background or ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+    </script>
+</body>
+</html>

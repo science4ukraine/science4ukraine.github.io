@@ -889,3 +889,106 @@ li.uname {
 
     /* Other styles remain unchanged for larger screens */
 }
+
+/* Enhanced Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+    color: #0056B9;
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+    transition: color 0.18s;
+}
+
+.dropbtn:hover, .dropdown:hover .dropbtn {
+    color: #003366;
+}
+
+.dropdown-content {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+    min-width: 200px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 86, 185, 0.05);
+    z-index: 2000;
+    border-radius: 12px;
+    padding: 8px 0;
+    transform: translateY(-8px) scale(0.95);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: transparent;
+}
+
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.dropdown-content li {
+    background: transparent;
+    list-style: none;
+    animation: dropdown-fade-in 0.3s both;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li:nth-child(1) { animation-delay: 0.05s; }
+.dropdown-content li:nth-child(2) { animation-delay: 0.1s; }
+.dropdown-content li:nth-child(3) { animation-delay: 0.15s; }
+.dropdown-content li:nth-child(4) { animation-delay: 0.2s; }
+.dropdown-content li:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes dropdown-fade-in {
+    from { 
+        opacity: 0; 
+        transform: translateY(-8px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.dropdown-content a {
+    color: #0056B9;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: none;
+    transition: all 0.15s ease;
+    position: relative;
+    margin: 0 8px;
+    border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(135deg, #0056B9 0%, #003366 100%);
+    color: white;
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 86, 185, 0.3);
+}
