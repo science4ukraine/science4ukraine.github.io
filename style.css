@@ -30,9 +30,11 @@ body {
 }
 
 .header {
+    position: relative;
     padding: 10px;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 nav { 
@@ -71,6 +73,7 @@ nav {
 .nav-links ul li a {
     text-decoration: none;
     color: black;
+    font-size: 14px;
 }
 
 .clearfix::after {
@@ -549,6 +552,10 @@ li.uname {
     .nav-links.active ul li {
         margin: 10px 0;
     }
+    
+    .nav-links ul li a {
+        font-size: 12px;
+    }
 
     .carousel-slide .caption {
         position: absolute;
@@ -911,11 +918,13 @@ li.uname {
 }
 
 .dropdown-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px) scale(0.95);
     top: 100%;
     background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
     min-width: 200px;
@@ -926,7 +935,6 @@ li.uname {
     z-index: 2000;
     border-radius: 12px;
     padding: 8px 0;
-    transform: translateY(-8px) scale(0.95);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
 }
@@ -944,15 +952,16 @@ li.uname {
 .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0) scale(1);
+    transform: translateX(-50%) translateY(0) scale(1);
 }
 
-.dropdown-content li {
+.nav-links ul .dropdown-content li {
     background: transparent;
     list-style: none;
     animation: dropdown-fade-in 0.3s both;
     padding: 0;
     margin: 0;
+    display: block !important;
 }
 
 .dropdown-content li:nth-child(1) { animation-delay: 0.05s; }

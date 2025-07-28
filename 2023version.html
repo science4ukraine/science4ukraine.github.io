@@ -6,6 +6,7 @@
     <title>2023 Gallery - Science for Ukraine</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
         .gallery-container {
             max-width: 1400px;
             margin: 40px auto;
@@ -23,10 +24,15 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 44px;
         }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .image-grid img {
             width: 100%;
-            aspect-ratio: 3 / 2;
-            object-fit: cover;
+            height: 300px;
+            object-fit: contain;
             border-radius: 0;
             box-shadow: 0 8px 32px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.08);
             transition: transform 0.22s, box-shadow 0.22s;
@@ -39,14 +45,36 @@
             box-shadow: 0 0 0 8px rgba(0,86,185,0.13), 0 16px 48px rgba(0,86,185,0.18), 0 4px 16px rgba(0,0,0,0.12);
             outline: none;
         }
+        .image-caption {
+            margin-top: 12px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+            max-width: 100%;
+            line-height: 1.4;
+            background: transparent;
+            padding: 0;
+            border: none;
+        }
         @media (max-width: 1000px) {
+            .gallery-container {
+                max-width: 900px;
+                margin-left: 80px;
+            }
             .image-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
             }
         }
         @media (max-width: 700px) {
+            .gallery-container {
+                max-width: 600px;
+                margin-left: 60px;
+            }
             .image-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
         /* Lightbox styles */
@@ -71,15 +99,41 @@
             box-shadow: 0 0 40px 8px rgba(0,86,185,0.18);
             background: #fff;
         }
-        .lightbox-close {
+        .lightbox-nav {
             position: absolute;
-            top: 32px;
-            right: 48px;
-            font-size: 2.5rem;
-            color: #fff;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 15px 10px;
             cursor: pointer;
             z-index: 10000;
-            font-family: Arial, sans-serif;
+            transition: background 0.3s ease;
+        }
+        .lightbox-nav:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .lightbox-prev {
+            left: 20px;
+        }
+        .lightbox-next {
+            right: 20px;
+        }
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            max-width: 80%;
+            z-index: 10001;
         }
     </style>
 </head>
@@ -101,9 +155,9 @@
                     <li><a href="accommodation.html">Accommodation</a></li>
                     <li><a href="partners.html">Partners</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">2023 &#x25BC;</a>
+                        <a href="#" class="dropbtn" style="color:#0056B9;">2023 &#x25BC;</a>
                         <ul class="dropdown-content">
-                            <li><a href="2023version.html">Gallery</a></li>
+                            <li><a href="2023version.html" style="color:#FFD800;">Gallery</a></li>
                             <li><a href="2023_program.html">Program</a></li>
                             <li><a href="2023_invited-speakers.html">Speakers</a></li>
                             <li><a href="2023_attendees.html">Attendees</a></li>
@@ -114,24 +168,146 @@
             </div>
         </nav>
     </header>
-    <div class="gallery-container">
-        <h1 class="gallery-title">2023 Gallery</h1>
-        <div class="image-grid">
-            <img src="images/img1.jpg" alt="2023 Event 1" onclick="openLightbox(this)">
-            <img src="images/img2.jpg" alt="2023 Event 2" onclick="openLightbox(this)">
-            <img src="images/img3.jpg" alt="2023 Event 3" onclick="openLightbox(this)">
-            <img src="images/akhanikaev.jpg" alt="2023 Event 4" onclick="openLightbox(this)">
-            <img src="images/alu.jpg" alt="2023 Event 5" onclick="openLightbox(this)">
-            <img src="images/Brumberg.jpg" alt="2023 Event 6" onclick="openLightbox(this)">
-            <img src="images/cafe.jpg" alt="2023 Event 7" onclick="openLightbox(this)">
-            <img src="images/lecture-halls.jpg" alt="2023 Event 8" onclick="openLightbox(this)">
+    <div class="main">
+        <h1 class="title">2023 GALLERY</h1>
+        <div class="gallery-container">
+            <div class="image-grid">
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8190-min.jpg" alt="2023 Event 1" onclick="openLightbox(this)">
+                <p class="image-caption">First day</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8195-min.jpg" alt="2023 Event 2" onclick="openLightbox(this)">
+                <p class="image-caption">Opening ceremony speech by Dr. Khanikaev</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8211-min.jpg" alt="2023 Event 3" onclick="openLightbox(this)">
+                <p class="image-caption">Opening ceremony speech by Dr. Alù</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8252-min.jpg" alt="2023 Event 4" onclick="openLightbox(this)">
+                <p class="image-caption">CCNY Campus Tour</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8256-min.jpg" alt="2023 Event 5" onclick="openLightbox(this)">
+                <p class="image-caption">Trip to Simons Foundation and talk by Dr. Spergel</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8260-min.jpg" alt="2023 Event 6" onclick="openLightbox(this)">
+                <p class="image-caption">Lunch and discussions at the Simons Foundation</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8265-min.jpg" alt="2023 Event 7" onclick="openLightbox(this)">
+                <p class="image-caption">Talk at the Simons Foundation by Dr. Gabadadze Part 1</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8268-min.jpg" alt="2023 Event 8" onclick="openLightbox(this)">
+                <p class="image-caption">Part 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8274-min.jpg" alt="2023 Event 9" onclick="openLightbox(this)">
+                <p class="image-caption">Part 3</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8282-min.jpg" alt="2023 Event 10" onclick="openLightbox(this)">
+                <p class="image-caption">Walk through Manhattan and the New York Public Library</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8300-min.jpg" alt="2023 Event 11" onclick="openLightbox(this)">
+                <p class="image-caption">At Times Square</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8321-min.jpg" alt="2023 Event 12" onclick="openLightbox(this)">
+                <p class="image-caption">At Central Park</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8327-min.jpg" alt="2023 Event 13" onclick="openLightbox(this)">
+                <p class="image-caption">Central Park Part 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8355-min.jpg" alt="2023 Event 14" onclick="openLightbox(this)">
+                <p class="image-caption">Research in the labs</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8361-Enhanced-NR-min.jpg" alt="2023 Event 15" onclick="openLightbox(this)">
+                <p class="image-caption">Research in the labs</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8375-Enhanced-NR-min.jpg" alt="2023 Event 16" onclick="openLightbox(this)">
+                <p class="image-caption">Research in the labs</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8378-min.jpg" alt="2023 Event 17" onclick="openLightbox(this)">
+                <p class="image-caption">Research in the labs</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8401-min.jpg" alt="2023 Event 18" onclick="openLightbox(this)">
+                <p class="image-caption">Research in the labs</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8419-min.jpg" alt="2023 Event 19" onclick="openLightbox(this)">
+                <p class="image-caption">Research in the labs</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8449-min.jpg" alt="2023 Event 20" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. "Potential use of amino acid crystals as actuators"</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8452-min.jpg" alt="2023 Event 21" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. Robot demonstration.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8454-min.jpg" alt="2023 Event 22" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. </p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8455-min.jpg" alt="2023 Event 23" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. "Amorphous silicon nanostructures scattering"</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8457-min.jpg" alt="2023 Event 24" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. "Protein Architecture: Exploring Structural Insights and Mutational Effects"</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8460-Enhanced-NR-min.jpg" alt="2023 Event 25" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. "Artificial Intelligence for Predicting Ωm From a Single Galaxy"</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8469-Enhanced-NR-min.jpg" alt="2023 Event 26" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8481-min.jpg" alt="2023 Event 27" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. "Using water responsible materials in the industry"</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8488-min.jpg" alt="2023 Event 28" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. "Transport properties"</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8499-min.jpg" alt="2023 Event 30" onclick="openLightbox(this)">
+                <p class="image-caption">Poster presentation session. "Cayley Graphs and Coupled Resonators"</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8496-Enhanced-NR-min.jpg" alt="2023 Event 29" onclick="openLightbox(this)">
+                <p class="image-caption">Students presented certificates of completion. </p>
+            </div>
+            <div class="gallery-item">
+                <img src="2023gallery_compressed/IMG_8506-Enhanced-NR-min.jpg" alt="2023 Event 31" onclick="openLightbox(this)">
+                <p class="image-caption">Group Photo in front of CCNY Campus</p>
+            </div>
         </div>
         <!-- Lightbox Modal -->
         <div class="lightbox" id="lightbox">
-            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <button class="lightbox-nav lightbox-prev" onclick="previousImage()">&#10094;</button>
             <img id="lightbox-img" src="" alt="Full Size">
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">&#10095;</button>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
         </div>
     </div>
+    <button id="scrollToTop" onclick="scrollToTop()"><img src="images/chevronbg.png" alt="Scroll Up"></button>
+    <br><br><br>
     <footer class="footer">
         <div class="footer-container">
             <p class="ty">THANK YOU TO OUR SPONSORS</p>
@@ -142,25 +318,82 @@
         </div>
     </footer>
     <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image-grid img');
+        
         function openLightbox(img) {
             var lightbox = document.getElementById('lightbox');
             var lightboxImg = document.getElementById('lightbox-img');
+            var lightboxCaption = document.getElementById('lightbox-caption');
+            
             lightboxImg.src = img.src;
+            
+            // Get the caption from the parent gallery-item
+            var galleryItem = img.closest('.gallery-item');
+            var caption = galleryItem.querySelector('.image-caption').textContent;
+            lightboxCaption.textContent = caption;
+            
             lightbox.classList.add('active');
+            
+            // Find the index of the clicked image
+            currentImageIndex = Array.from(images).indexOf(img);
         }
+        
         function closeLightbox() {
             var lightbox = document.getElementById('lightbox');
             var lightboxImg = document.getElementById('lightbox-img');
             lightbox.classList.remove('active');
             lightboxImg.src = '';
         }
-        // Close lightbox on background or ESC
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            var img = images[currentImageIndex];
+            document.getElementById('lightbox-img').src = img.src;
+            
+            // Update caption
+            var galleryItem = img.closest('.gallery-item');
+            var caption = galleryItem.querySelector('.image-caption').textContent;
+            document.getElementById('lightbox-caption').textContent = caption;
+        }
+        
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            var img = images[currentImageIndex];
+            document.getElementById('lightbox-img').src = img.src;
+            
+            // Update caption
+            var galleryItem = img.closest('.gallery-item');
+            var caption = galleryItem.querySelector('.image-caption').textContent;
+            document.getElementById('lightbox-caption').textContent = caption;
+        }
+        
+        // Keyboard navigation
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeLightbox();
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') previousImage();
+            }
         });
+        
         document.getElementById('lightbox').addEventListener('click', function(e) {
             if (e.target === this) closeLightbox();
         });
+        
+        // Scroll to top functionality
+        window.addEventListener('scroll', function () {
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.opacity = '1';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
